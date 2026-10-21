@@ -1,0 +1,16 @@
+--bare
+-I
+D:/cyq/project/javascript/qt/learn_qt/1/test1/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug
+-I
+D:/cyq/project/javascript/qt/learn_qt/1/test1/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/test1
+-I
+D:/cyq/project/javascript/qt/learn_qt/1/test1/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug
+-I
+D:/soft/qt/6.12.0/mingw_64/qml
+--resource
+D:/cyq/project/javascript/qt/learn_qt/1/test1/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qmake_test1.qrc
+--resource
+D:/cyq/project/javascript/qt/learn_qt/1/test1/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/apptest1_raw_qml_0.qrc
+D:/cyq/project/javascript/qt/learn_qt/1/test1/Main.qml
+--json
+D:/cyq/project/javascript/qt/learn_qt/1/test1/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/apptest1_qmllint.json

@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/test1/">
+    <file alias="Main.qml">D:/cyq/project/javascript/qt/learn_qt/1/test1/Main.qml</file>
+  </qresource>
+</RCC>
+

@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  ".qt/rcc/qrc_apptest1_raw_qml_0.cpp"
+  ".qt/rcc/qrc_qmake_test1.cpp"
+  ".rcc/qmlcache/apptest1_Main_qml.cpp"
+  ".rcc/qmlcache/apptest1_Main_qml.cpp.aotstats"
+  ".rcc/qmlcache/apptest1_qmlcache_loader.cpp"
+  "CMakeFiles/apptest1.dir/apptest1_autogen/mocs_compilation.cpp.obj"
+  "CMakeFiles/apptest1.dir/apptest1_autogen/mocs_compilation.cpp.obj.d"
+  "CMakeFiles/apptest1.dir/apptest1_qmltyperegistrations.cpp.obj"
+  "CMakeFiles/apptest1.dir/apptest1_qmltyperegistrations.cpp.obj.d"
+  "CMakeFiles/apptest1.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_apptest1_raw_qml_0.cpp.obj"
+  "CMakeFiles/apptest1.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_apptest1_raw_qml_0.cpp.obj.d"
+  "CMakeFiles/apptest1.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_qmake_test1.cpp.obj"
+  "CMakeFiles/apptest1.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_qmake_test1.cpp.obj.d"
+  "CMakeFiles/apptest1.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/apptest1_Main_qml.cpp.obj"
+  "CMakeFiles/apptest1.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/apptest1_Main_qml.cpp.obj.d"
+  "CMakeFiles/apptest1.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/apptest1_qmlcache_loader.cpp.obj"
+  "CMakeFiles/apptest1.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/apptest1_qmlcache_loader.cpp.obj.d"
+  "CMakeFiles/apptest1.dir/main.cpp.obj"
+  "CMakeFiles/apptest1.dir/main.cpp.obj.d"
+  "CMakeFiles/apptest1_autogen.dir/AutogenUsed.txt"
+  "CMakeFiles/apptest1_autogen.dir/ParseCache.txt"
+  "apptest1_autogen"
+  "apptest1.exe"
+  "apptest1.exe.manifest"
+  "apptest1.pdb"
+  "apptest1_autogen/mocs_compilation.cpp"
+  "apptest1_autogen/timestamp"
+  "apptest1_qmltyperegistrations.cpp"
+  "libapptest1.dll.a"
+  "meta_types/apptest1_json_file_list.txt"
+  "meta_types/apptest1_json_file_list.txt.timestamp"
+  "meta_types/qt6apptest1_metatypes.json"
+  "meta_types/qt6apptest1_metatypes.json.gen"
+  "test1/apptest1.qmltypes"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/apptest1.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

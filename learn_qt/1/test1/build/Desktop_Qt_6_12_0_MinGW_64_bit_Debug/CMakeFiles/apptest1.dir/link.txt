@@ -1,0 +1,3 @@
+D:\soft\qt\Tools\CMake_64\bin\cmake.exe -E rm -f CMakeFiles\apptest1.dir/objects.a
+D:\soft\qt\Tools\mingw1310_64\bin\ar.exe qc CMakeFiles\apptest1.dir/objects.a @CMakeFiles\apptest1.dir\objects1.rsp
+D:\soft\qt\Tools\mingw1310_64\bin\g++.exe -g -mwindows -Wl,--whole-archive CMakeFiles\apptest1.dir/objects.a -Wl,--no-whole-archive -o apptest1.exe -Wl,--out-implib,libapptest1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\apptest1.dir\linkLibs.rsp

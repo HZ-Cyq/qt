@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/test1">
+    <file alias="qmldir">D:/cyq/project/javascript/qt/learn_qt/1/test1/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/test1/qmldir</file>
+  </qresource>
+</RCC>
+
