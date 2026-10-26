@@ -270,7 +270,6 @@ apptest1.exe: D:/soft/qt/6.12.0/mingw_64/lib/libQt6Gui.a
 apptest1.exe: D:/soft/qt/6.12.0/mingw_64/lib/libQt6Qml.a
 apptest1.exe: D:/soft/qt/6.12.0/mingw_64/lib/libQt6Network.a
 apptest1.exe: D:/soft/qt/6.12.0/mingw_64/lib/libQt6Core.a
-apptest1.exe: D:/soft/qt/6.12.0/mingw_64/lib/libQt6EntryPoint.a
 apptest1.exe: apptest1.exe.manifest
 apptest1.exe: CMakeFiles/apptest1.dir/linkLibs.rsp
 apptest1.exe: CMakeFiles/apptest1.dir/objects1.rsp

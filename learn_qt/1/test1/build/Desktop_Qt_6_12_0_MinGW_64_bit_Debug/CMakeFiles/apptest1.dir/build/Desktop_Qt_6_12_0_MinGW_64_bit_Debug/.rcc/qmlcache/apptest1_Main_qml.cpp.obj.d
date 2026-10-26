@@ -368,14 +368,6 @@ CMakeFiles/apptest1.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache
  D:/soft/qt/6.12.0/mingw_64/include/QtCore/qspan.h \
  D:/soft/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cassert \
  D:/soft/qt/6.12.0/mingw_64/include/QtCore/q20iterator.h \
- D:/soft/qt/6.12.0/mingw_64/include/QtCore/qcoreapplication.h \
- D:/soft/qt/6.12.0/mingw_64/include/QtCore/qcoreevent.h \
- D:/soft/qt/6.12.0/mingw_64/include/QtCore/qbasictimer.h \
- D:/soft/qt/6.12.0/mingw_64/include/QtCore/qabstracteventdispatcher.h \
- D:/soft/qt/6.12.0/mingw_64/include/QtCore/qeventloop.h \
- D:/soft/qt/6.12.0/mingw_64/include/QtCore/qdeadlinetimer.h \
- D:/soft/qt/6.12.0/mingw_64/include/QtCore/qnativeinterface.h \
- D:/soft/qt/6.12.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
  D:/soft/qt/6.12.0/mingw_64/include/QtCore/qtimezone.h \
  D:/soft/qt/6.12.0/mingw_64/include/QtQml/qjsengine.h \
  D:/soft/qt/6.12.0/mingw_64/include/QtQml/qjsmanagedvalue.h \

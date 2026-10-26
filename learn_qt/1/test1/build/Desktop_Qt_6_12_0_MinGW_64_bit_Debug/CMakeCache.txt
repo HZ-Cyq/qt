@@ -20,14 +20,15 @@ CMAKE_ADDR2LINE:FILEPATH=D:/soft/qt/Tools/mingw1310_64/bin/addr2line.exe
 //Path to a program.
 CMAKE_AR:FILEPATH=D:/soft/qt/Tools/mingw1310_64/bin/ar.exe
 
-//No help, variable specified on the command line.
+//Choose the type of build, options are: None Debug Release RelWithDebInfo
+// MinSizeRel ...
 CMAKE_BUILD_TYPE:STRING=Debug
 
 //No help, variable specified on the command line.
 CMAKE_COLOR_DIAGNOSTICS:BOOL=ON
 
-//CXX compiler
-CMAKE_CXX_COMPILER:STRING=D:/soft/qt/Tools/mingw1310_64/bin/g++.exe
+//No help, variable specified on the command line.
+CMAKE_CXX_COMPILER:UNINITIALIZED=D:/soft/qt/Tools/mingw1310_64/bin/g++.exe
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -176,7 +177,7 @@ CMAKE_OBJCOPY:FILEPATH=D:/soft/qt/Tools/mingw1310_64/bin/objcopy.exe
 CMAKE_OBJDUMP:FILEPATH=D:/soft/qt/Tools/mingw1310_64/bin/objdump.exe
 
 //No help, variable specified on the command line.
-CMAKE_PREFIX_PATH:PATH=D:/soft/qt/6.12.0/mingw_64
+CMAKE_PREFIX_PATH:UNINITIALIZED=D:/soft/qt/6.12.0/mingw_64
 
 //Value Computed by CMake
 CMAKE_PROJECT_DESCRIPTION:STATIC=

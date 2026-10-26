@@ -1,0 +1,94 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CMake Configure",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-S",
+                "${workspaceFolder}/1/test1",
+                "-B",
+                "${workspaceFolder}/1/test1/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug",
+                "-G",
+                "MinGW Makefiles",
+                "-DCMAKE_PREFIX_PATH=D:/soft/qt/6.12.0/mingw_64",
+                "-DCMAKE_CXX_COMPILER=D:/soft/qt/Tools/mingw1310_64/bin/g++.exe",
+                "-DCMAKE_C_COMPILER=D:/soft/qt/Tools/mingw1310_64/bin/gcc.exe",
+                "-DCMAKE_BUILD_TYPE=Debug"
+            ],
+            "options": {
+                "env": {
+                    "PATH": "D:/soft/qt/Tools/CMake_64/bin;D:/soft/qt/Tools/mingw1310_64/bin;D:/soft/qt/6.12.0/mingw_64/bin;${env:PATH}"
+                }
+            },
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "CMake Build",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/1/test1/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug",
+                "--",
+                "-j8"
+            ],
+            "options": {
+                "env": {
+                    "PATH": "D:/soft/qt/Tools/CMake_64/bin;D:/soft/qt/Tools/mingw1310_64/bin;D:/soft/qt/6.12.0/mingw_64/bin;${env:PATH}"
+                }
+            },
+            "dependsOn": [],
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Build and Run",
+            "type": "shell",
+            "command": "${workspaceFolder}/1/test1/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/apptest1.exe",
+            "options": {
+                "env": {
+                    "PATH": "D:/soft/qt/6.12.0/mingw_64/bin;D:/soft/qt/Tools/mingw1310_64/bin;D:/soft/qt/Tools/CMake_64/bin;${env:PATH}"
+                }
+            },
+            "dependsOn": "CMake Build",
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "Run Only",
+            "type": "shell",
+            "command": "${workspaceFolder}/1/test1/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/apptest1.exe",
+            "options": {
+                "env": {
+                    "PATH": "D:/soft/qt/6.12.0/mingw_64/bin;D:/soft/qt/Tools/mingw1310_64/bin;D:/soft/qt/Tools/CMake_64/bin;${env:PATH}"
+                }
+            },
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "Clean",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/1/test1/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug",
+                "--target",
+                "clean"
+            ],
+            "options": {
+                "env": {
+                    "PATH": "D:/soft/qt/Tools/CMake_64/bin;D:/soft/qt/Tools/mingw1310_64/bin;D:/soft/qt/6.12.0/mingw_64/bin;${env:PATH}"
+                }
+            },
+            "problemMatcher": [],
+            "group": "build"
+        }
+    ]
+}

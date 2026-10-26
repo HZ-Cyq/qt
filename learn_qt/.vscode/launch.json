@@ -1,0 +1,50 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Qt App",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/1/test1/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/apptest1.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/1/test1/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "D:/soft/qt/6.12.0/mingw_64/bin;D:/soft/qt/Tools/mingw1310_64/bin;${env:PATH}"
+                }
+            ],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "D:/soft/qt/Tools/mingw1310_64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "CMake Build"
+        },
+        {
+            "name": "Run Qt App (No Debug)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/1/test1/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/apptest1.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/1/test1/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "D:/soft/qt/6.12.0/mingw_64/bin;D:/soft/qt/Tools/mingw1310_64/bin;${env:PATH}"
+                }
+            ],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "D:/soft/qt/Tools/mingw1310_64/bin/gdb.exe",
+            "preLaunchTask": "CMake Build"
+        }
+    ]
+}
