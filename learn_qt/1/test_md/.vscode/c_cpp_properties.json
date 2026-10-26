@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "name": "Qt MinGW",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/build/test_md_autogen/include",
+                "D:/soft/qt/6.12.0/mingw_64/include/**",
+                "D:/soft/qt/6.12.0/mingw_64/include/QtCore/**",
+                "D:/soft/qt/6.12.0/mingw_64/include/QtGui/**",
+                "D:/soft/qt/6.12.0/mingw_64/include/QtWidgets/**",
+                "D:/soft/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/**",
+                "D:/soft/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/**",
+                "D:/soft/qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "QT_CORE_LIB",
+                "QT_GUI_LIB",
+                "QT_WIDGETS_LIB"
+            ],
+            "compilerPath": "D:/soft/qt/Tools/mingw1310_64/bin/g++.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}

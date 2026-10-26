@@ -1,303 +1,132 @@
 import QtQuick
 import QtQuick.Controls
-import QtQuick.Layouts
+import QtQuick.Layouts   // ⭐第4课需要导入布局模块
 
-// 第10课：综合项目 - 待办事项应用
-// 综合运用前9课所有知识！
-// 包含：布局、状态、动画、信号、列表、页面导航
+// 第4课：布局
+// 学习RowLayout、ColumnLayout、GridLayout
+// 前三课内容已保存到 lessons/ 目录
 
 ApplicationWindow {
-    width: 420
-    height: 650
+    width: 500
+    height: 400
     visible: true
-    title: "📝 待办事项"
+    title: "第4课：布局"
 
-    color: "#ecf0f1"
-
-    // ⭐全局数据模型
-    ListModel {
-        id: todoModel
-        ListElement { text: "学习Qt Quick基础"; done: true; priority: "高" }
-        ListElement { text: "完成综合项目"; done: false; priority: "高" }
-        ListElement { text: "复习动画效果"; done: false; priority: "中" }
-    }
-
-    // ⭐全局状态
-    property int completedCount: 0
-    property string filterMode: "all"  // all / active / done
-
-    // 计算完成数量
-    function updateCompletedCount() {
-        var count = 0
-        for (var i = 0; i < todoModel.count; i++) {
-            if (todoModel.get(i).done) count++
-        }
-        completedCount = count
-    }
-
-    Component.onCompleted: updateCompletedCount()
-
+    // ⭐⭐核心重点：ColumnLayout - 垂直排列子元素
     ColumnLayout {
-        anchors.fill: parent
-        spacing: 0
+        anchors.fill: parent      // 填满整个窗口
+        anchors.margins: 20       // 与窗口边缘保持20像素间距
+        spacing: 15               // 子元素之间的间距
 
-        // ⭐顶部标题栏
-        Rectangle {
-            Layout.fillWidth: true
-            height: 60
-            color: "#3498db"
-
-            RowLayout {
-                anchors.fill: parent
-                anchors.leftMargin: 20
-                anchors.rightMargin: 20
-
-                Text {
-                    text: "📝 待办事项"
-                    color: "white"
-                    font.pixelSize: 20
-                    font.bold: true
-                }
-
-                Item { Layout.fillWidth: true }
-
-                Text {
-                    text: completedCount + "/" + todoModel.count + " 完成"
-                    color: "#d6eaf8"
-                    font.pixelSize: 14
-                }
-            }
+        // 标题
+        Text {
+            text: "第4课：布局学习"
+            font.pixelSize: 24
+            font.bold: true
+            Layout.alignment: Qt.AlignHCenter   // 在布局中水平居中
         }
 
-        // ⭐进度条
-        Rectangle {
-            Layout.fillWidth: true
-            height: 6
-            color: "#bdc3c7"
+        // ⭐RowLayout - 水平排列子元素
+        RowLayout {
+            Layout.fillWidth: true    // 填满可用宽度
+            spacing: 10
 
             Rectangle {
-                width: parent.width * (todoModel.count > 0 ? completedCount / todoModel.count : 0)
-                height: parent.height
-                color: "#2ecc71"
+                width: 80
+                height: 50
+                color: "#e74c3c"      // 红色
+                radius: 5
+                Text { text: "红"; color: "white"; anchors.centerIn: parent }
+            }
 
-                // ⭐动画：进度变化时平滑过渡
-                Behavior on width {
-                    NumberAnimation { duration: 300 }
-                }
+            Rectangle {
+                width: 80
+                height: 50
+                color: "#2ecc71"      // 绿色
+                radius: 5
+                Text { text: "绿"; color: "white"; anchors.centerIn: parent }
+            }
+
+            Rectangle {
+                width: 80
+                height: 50
+                color: "#3498db"      // 蓝色
+                radius: 5
+                Text { text: "蓝"; color: "white"; anchors.centerIn: parent }
+            }
+
+            // ⭐Layout.fillWidth: true 让最后一个元素填满剩余空间
+            Rectangle {
+                //Layout.fillWidth: true
+                height: 50
+                color: "#9b59b6"      // 紫色
+                radius: 5
+                Text { text: "我填满剩余空间"; color: "white"; anchors.centerIn: parent }
             }
         }
 
-        // ⭐输入区域
-        Rectangle {
+        // ⭐GridLayout - 网格布局
+        GridLayout {
             Layout.fillWidth: true
-            Layout.margins: 15
-            height: 50
-            color: "white"
-            radius: 25
-            border.color: "#ddd"
+            Layout.fillHeight: true   // 填满剩余高度
+            columns: 3                // 每行3列
+            rows: 2                   // 2行
+            columnSpacing: 10
+            rowSpacing: 10
 
-            RowLayout {
-                anchors.fill: parent
-                anchors.leftMargin: 20
-                anchors.rightMargin: 5
+            // 网格中的元素按顺序排列：第1行
+            Rectangle {
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                color: "#f39c12"
+                radius: 5
+                Text { text: "1"; anchors.centerIn: parent; font.pixelSize: 20 }
+            }
+            Rectangle {
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                color: "#1abc9c"
+                radius: 5
+                Text { text: "2"; anchors.centerIn: parent; font.pixelSize: 20 }
+            }
+            Rectangle {
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                color: "#e67e22"
+                radius: 5
+                Text { text: "3"; anchors.centerIn: parent; font.pixelSize: 20 }
+            }
 
-                TextField {
-                    id: inputField
-                    Layout.fillWidth: true
-                    placeholderText: "输入新任务..."
-                    background: Item {}
-                    font.pixelSize: 16
-
-                    // ⭐回车添加任务
-                    onAccepted: addButton.clicked()
-                }
-
-                Button {
-                    id: addButton
-                    text: "＋"
-                    Layout.preferredWidth: 40
-                    Layout.preferredHeight: 40
-                    enabled: inputField.text.trim() !== ""
-
-                    onClicked: {
-                        todoModel.append({
-                            text: inputField.text.trim(),
-                            done: false,
-                            priority: "中"
-                        })
-                        inputField.text = ""
-                        updateCompletedCount()
-                    }
-                }
+            // 第2行
+            Rectangle {
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                color: "#34495e"
+                radius: 5
+                Text { text: "4"; color: "white"; anchors.centerIn: parent; font.pixelSize: 20 }
+            }
+            Rectangle {
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                color: "#16a085"
+                radius: 5
+                Text { text: "5"; anchors.centerIn: parent; font.pixelSize: 20 }
+            }
+            Rectangle {
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                color: "#c0392b"
+                radius: 5
+                Text { text: "6"; anchors.centerIn: parent; font.pixelSize: 20 }
             }
         }
 
-        // ⭐筛选按钮
-        RowLayout {
+        // 底部提示
+        Text {
+            text: "试试调整窗口大小，布局会自动适应！"
+            font.pixelSize: 14
+            color: "gray"
             Layout.alignment: Qt.AlignHCenter
-            spacing: 10
-
-            Repeater {
-                model: [
-                    { name: "全部", mode: "all" },
-                    { name: "进行中", mode: "active" },
-                    { name: "已完成", mode: "done" }
-                ]
-
-                Button {
-                    text: modelData.name
-                    flat: filterMode !== modelData.mode
-                    highlighted: filterMode === modelData.mode
-                    onClicked: filterMode = modelData.mode
-                }
-            }
-        }
-
-        // ⭐任务列表
-        ListView {
-            id: todoList
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            Layout.margins: 15
-            model: todoModel
-            clip: true
-            spacing: 10
-
-            // ⭐空状态提示
-            Text {
-                anchors.centerIn: parent
-                text: todoModel.count === 0 ? "🎉 没有任务，添加一个吧！" : ""
-                color: "#95a5a6"
-                font.pixelSize: 16
-                visible: todoModel.count === 0
-            }
-
-            delegate: Rectangle {
-                id: itemRoot
-                width: todoList.width
-                height: 60
-                color: "white"
-                radius: 12
-                border.color: model.done ? "#2ecc71" : "#eee"
-
-                // ⭐筛选逻辑
-                visible: filterMode === "all" ||
-                         (filterMode === "active" && !model.done) ||
-                         (filterMode === "done" && model.done)
-
-                // ⭐进入动画
-                opacity: 0
-                Component.onCompleted: {
-                    opacity = 1
-                }
-                Behavior on opacity {
-                    NumberAnimation { duration: 200 }
-                }
-
-                RowLayout {
-                    anchors.fill: parent
-                    anchors.leftMargin: 15
-                    anchors.rightMargin: 10
-
-                    // ⭐完成状态圆圈
-                    Rectangle {
-                        width: 28
-                        height: 28
-                        radius: 14
-                        color: model.done ? "#2ecc71" : "white"
-                        border.color: model.done ? "#2ecc71" : "#bdc3c7"
-                        border.width: 2
-
-                        Text {
-                            text: "✓"
-                            color: "white"
-                            anchors.centerIn: parent
-                            visible: model.done
-                        }
-
-                        Behavior on color {
-                            ColorAnimation { duration: 200 }
-                        }
-                    }
-
-                    // ⭐任务文本
-                    ColumnLayout {
-                        Layout.fillWidth: true
-                        spacing: 2
-
-                        Text {
-                            text: model.text
-                            font.pixelSize: 16
-                            font.strikeout: model.done
-                            color: model.done ? "#95a5a6" : "#2c3e50"
-                            elide: Text.ElideRight
-                            Layout.fillWidth: true
-                        }
-
-                        Text {
-                            text: "优先级: " + model.priority
-                            font.pixelSize: 11
-                            color: model.priority === "高" ? "#e74c3c" : "#95a5a6"
-                        }
-                    }
-
-                    // ⭐删除按钮
-                    Button {
-                        text: "✕"
-                        flat: true
-                        Layout.preferredWidth: 35
-                        onClicked: {
-                            todoModel.remove(model.index)
-                            updateCompletedCount()
-                        }
-                    }
-                }
-
-                // ⭐点击切换完成状态
-                MouseArea {
-                    anchors.fill: parent
-                    z: -1  // 在按钮下面
-                    onClicked: {
-                        todoModel.setProperty(model.index, "done", !model.done)
-                        updateCompletedCount()
-                    }
-                }
-            }
-        }
-
-        // ⭐底部统计
-        Rectangle {
-            Layout.fillWidth: true
-            height: 50
-            color: "white"
-
-            RowLayout {
-                anchors.fill: parent
-                anchors.leftMargin: 20
-                anchors.rightMargin: 20
-
-                Text {
-                    text: "共 " + todoModel.count + " 项"
-                    color: "#7f8c8d"
-                    font.pixelSize: 13
-                }
-
-                Item { Layout.fillWidth: true }
-
-                Button {
-                    text: "清除已完成"
-                    flat: true
-                    visible: completedCount > 0
-                    onClicked: {
-                        for (var i = todoModel.count - 1; i >= 0; i--) {
-                            if (todoModel.get(i).done) {
-                                todoModel.remove(i)
-                            }
-                        }
-                        updateCompletedCount()
-                    }
-                }
-            }
         }
     }
 }

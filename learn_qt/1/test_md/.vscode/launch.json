@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Qt Debug (simple)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/simple.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "D:\\soft\\qt\\6.12.0\\mingw_64\\bin;D:\\soft\\qt\\Tools\\mingw1310_64\\bin;${env:PATH}"
+                }
+            ],
+            "MIMode": "gdb",
+            "miDebuggerPath": "D:\\soft\\qt\\Tools\\mingw1310_64\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build"
+        }
+    ]
+}
