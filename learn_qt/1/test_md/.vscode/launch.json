@@ -2,10 +2,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Qt Debug (simple)",
+            "name": "Qt Debug",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/simple.exe",
+            "program": "${workspaceFolder}/build/test_md.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/build",

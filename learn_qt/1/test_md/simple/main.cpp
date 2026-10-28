@@ -10,5 +10,6 @@ int main(int argc, char *argv[]) {
     label.resize(400, 200);
     label.show();
     
-    return a.exec();
+    a.exec();
+    return 0;
 }
