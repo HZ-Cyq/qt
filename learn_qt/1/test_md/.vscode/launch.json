@@ -24,7 +24,8 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "build"
+            "preLaunchTask": "build",
+            "console":"integratedTerminal"
         }
     ]
 }

@@ -26,16 +26,16 @@
     <item>
      <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="pushButtonInformation">
         <property name="text">
-         <string>PushButton</string>
+         <string>弹窗口</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="pushButtonChangeBtnText">
         <property name="text">
-         <string>PushButton</string>
+         <string>修改按钮文字</string>
         </property>
        </widget>
       </item>
@@ -44,16 +44,16 @@
     <item>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QPushButton" name="pushButton_3">
+       <widget class="QPushButton" name="pushButton1UseSlot1">
         <property name="text">
-         <string>PushButton</string>
+         <string>按钮1，用槽1</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_4">
+       <widget class="QPushButton" name="pushButton2UseSlot1">
         <property name="text">
-         <string>PushButton</string>
+         <string>按钮2，用槽1</string>
         </property>
        </widget>
       </item>
@@ -62,16 +62,16 @@
     <item>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
-       <widget class="QPushButton" name="pushButton_17">
+       <widget class="QPushButton" name="pushButtonStart">
         <property name="text">
-         <string>PushButton</string>
+         <string>开始按钮</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_18">
+       <widget class="QPushButton" name="pushButtonStop">
         <property name="text">
-         <string>PushButton</string>
+         <string>停止按钮</string>
         </property>
        </widget>
       </item>
@@ -92,7 +92,7 @@
     <item row="0" column="0">
      <widget class="QLabel" name="label">
       <property name="text">
-       <string>标签1</string>
+       <string>标签1，按enter触发槽函数</string>
       </property>
      </widget>
     </item>
@@ -113,13 +113,13 @@
     <item row="1" column="0">
      <widget class="QLabel" name="label_2">
       <property name="text">
-       <string>标签2</string>
+       <string>标签2，修改值触发槽函数</string>
       </property>
      </widget>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -132,16 +132,16 @@
     <item>
      <layout class="QVBoxLayout" name="verticalLayout_5">
       <item>
-       <widget class="QPushButton" name="pushButton_5">
+       <widget class="QPushButton" name="pushButtonExport">
         <property name="text">
-         <string>PushButton</string>
+         <string>导出</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_6">
+       <widget class="QPushButton" name="pushButtonImport">
         <property name="text">
-         <string>PushButton</string>
+         <string>导入</string>
         </property>
        </widget>
       </item>
@@ -185,12 +185,12 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>21</x>
      <y>401</y>
-     <width>601</width>
+     <width>621</width>
      <height>121</height>
     </rect>
    </property>
@@ -262,6 +262,81 @@
      </layout>
     </item>
    </layout>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>750</y>
+     <width>60</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>800</y>
+     <width>60</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>CheckBox</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinBoxInterval">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>840</y>
+     <width>91</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>100</number>
+   </property>
+   <property name="maximum">
+    <number>10000</number>
+   </property>
+  </widget>
+  <widget class="QSlider" name="horizontalSlider">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>900</y>
+     <width>91</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Orientation::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="progressBar">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>950</y>
+     <width>118</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>730</y>
+     <width>451</width>
+     <height>251</height>
+    </rect>
+   </property>
   </widget>
  </widget>
  <resources/>
